@@ -1,13 +1,11 @@
-CREATE SCHEMA `pedido`;
-
 CREATE TABLE `cliente` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `cpf` VARCHAR(45) NOT NULL,
   `nome` VARCHAR(45) NULL,
   `sobrenome` VARCHAR(45) NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
-  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) VISIBLE);
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC));
 
 CREATE TABLE `pedido` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -22,7 +20,7 @@ CREATE TABLE `produto` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `descricao` VARCHAR(120) NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE);
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC));
 
 CREATE TABLE `produto_pedido` (
    `produto_fk` int NOT NULL,
